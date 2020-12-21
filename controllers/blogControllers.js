@@ -1,5 +1,5 @@
 const Post = require("../models/postSchema")
-const db = require("../db/connection");
+const db = require("../db/connectionsDb");
 
 db.on('error', console.error.bind(console.error, 'MongoDB connection error:'))
 
