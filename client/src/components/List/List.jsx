@@ -1,3 +1,4 @@
+
 // import { Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './List.css'
@@ -16,12 +17,10 @@ const List = () => {
     fecthBlogs()
   }, [])
 
-  
-
+ 
   return (
     <div>
       {allBlogs.map((blog) => {
-
         return (
           <Blog
             id={blog.id}
