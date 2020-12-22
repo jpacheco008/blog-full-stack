@@ -5,7 +5,7 @@ const Post = new Schema(
   {
     name: { type: String, required: false },
     imgURL: { type: String, requried: false },
-    comment: { typef: String, required: false },
+    comment: { type: String, required: false },
   },
   { timestamps: true }
 );

@@ -18,4 +18,3 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"))
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 
-
