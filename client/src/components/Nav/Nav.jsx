@@ -3,15 +3,10 @@ import "./Nav.css";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className='nav'>
       <div>
         <NavLink className="logo" to="/">
           Blog App
-        </NavLink>
-      </div>
-      <div>
-        <NavLink className="links" to="/">
-          Posts
         </NavLink>
       </div>
       <div>
