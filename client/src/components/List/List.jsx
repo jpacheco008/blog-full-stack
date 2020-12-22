@@ -1,10 +1,9 @@
 import './List.css'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './List.css'
 import Blog from '../Blog/Blog'
 import { getBlogs } from '../../services/blogs'
-import Nav from '../Nav/Nav'
 
 const List = () => {
   const [allBlogs, setAllBlogs] = useState([])
@@ -21,7 +20,6 @@ const List = () => {
   
   return (
     <div>
-      {/* <Nav /> */}
       {allBlogs.map((blog) => {
         return <Blog id={blog.id} name={blog.name} imgURL={blog.imgURL} comment={blog.comment}/>
       })}
