@@ -12,6 +12,7 @@ const List = () => {
   useEffect(() => {
     const fecthBlogs = async () => {
       const blogs = await getBlogs()
+      console.log(blogs);
       setAllBlogs(blogs)
     }
     fecthBlogs()
@@ -20,7 +21,7 @@ const List = () => {
   
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       {allBlogs.map((blog) => {
         return <Blog id={blog.id} name={blog.name} imgURL={blog.imgURL} comment={blog.comment}/>
       })}
