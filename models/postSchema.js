@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const Post = new Schema(
   {
     name: { type: String, required: false },
-    imgURL: { type: String, requried: false },
+    imgURL: { type: String, required: false },
     comment: { type: String, required: false },
   },
   { timestamps: true }
