@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import SingleBlog from "./screens/SingleBlog/SingleBlog";
 import Nav from "./components/Nav/Nav";
+import AddBlog from "./screens/AddBlog/AddBlog";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Switch>
         <Nav />
         <Route exact path="/" component={Home} />
-        <Route path="/post/:id" component={SingleBlog} />
+        <Route exact path="/post/:id" component={SingleBlog} />
+        <Route exact path="/addpost" component={AddBlog} />
       </Switch>
     </div>
   );
