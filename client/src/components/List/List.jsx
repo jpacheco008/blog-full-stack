@@ -1,22 +1,23 @@
-import "./List.css";
+
 // import { Route } from 'react-router-dom'
-import { useState, useEffect } from "react";
-import "./List.css";
-import Blog from "../Blog/Blog";
-import { getBlogs } from "../../services/blogs";
+import { useState, useEffect } from 'react'
+import './List.css'
+import Blog from '../Blog/Blog'
+import { getBlogs } from '../../services/blogs'
 
 const List = () => {
-  const [allBlogs, setAllBlogs] = useState([]);
+  const [allBlogs, setAllBlogs] = useState([])
 
   useEffect(() => {
     const fecthBlogs = async () => {
-      const blogs = await getBlogs();
+      const blogs = await getBlogs()
       console.log(blogs);
-      setAllBlogs(blogs);
-    };
-    fecthBlogs();
-  }, []);
+      setAllBlogs(blogs)
+    }
+    fecthBlogs()
+  }, [])
 
+ 
   return (
     <div>
       {allBlogs.map((blog) => {

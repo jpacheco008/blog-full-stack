@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./SingleBlog.css";
-import Nav from "../../components/Nav/Nav";
+// import Nav from "../../components/Nav/Nav";
 import { getBlog } from "../../services/blogs.js";
 import { useParams, Link } from "react-router-dom";
 
