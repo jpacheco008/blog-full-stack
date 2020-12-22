@@ -1,10 +1,11 @@
 import './Home.css'
 import List from '../../components/List/List'
+import Nav from '../../components/Nav/Nav'
 
 const Home = () => {
   return (
     <div>
-      We are working
+      <Nav />
       <List />
     </div>
   )
