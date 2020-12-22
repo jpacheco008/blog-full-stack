@@ -15,7 +15,7 @@ const getAllPosts = async (req, res) => {
 const getPost = async (req, res) => {
   try {
     const { id } = req.params
-    const post = await Post.findbyId(id)
+    const post = await Post.findById(id)
     if (post) {
       return res.json(post)
     }
@@ -30,7 +30,7 @@ const createPost = async (req, res) => {
   try {
     const newPost = await new Post(req.body)
     await newPost.save()
-    req.status(201).json(newPost)
+    res.status(201).json(newPost)
   } catch (error) {
     res.status(500).json({error: error.message})
   }
@@ -52,7 +52,7 @@ const updatePost = async (req, res) => {
 const deletePost = async (req, res) =>{
   try {
     const { id } = req.params;
-  const deletePost = await Post.findByIdandDelete(id)
+  const deletePost = await Post.findByIdAndDelete(id)
   if (deletePost) {
     return res.status(200).send("Post deleted")
   }
