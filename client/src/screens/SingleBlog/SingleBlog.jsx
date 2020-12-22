@@ -28,6 +28,12 @@ const SingleBlog = () => {
       <img className="postImg" src={post.imgURL} alt={post.name}></img>
       <div className="name">{post.name}</div>
       <div className="comment">{post.comment}</div>
+      <div className="button-div">
+        <button className="edit-button">
+          <Link to={`/posts/${post.id}`}>Edit</Link>
+        </button>
+        <button className="delete-button">Delete</button>
+      </div>
     </div>
   );
 };
