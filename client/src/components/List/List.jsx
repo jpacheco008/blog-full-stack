@@ -19,7 +19,7 @@ const List = () => {
 
  
   return (
-    <div>
+    <div className='list'>
       {allBlogs.map((blog) => {
         return (
           <Blog
