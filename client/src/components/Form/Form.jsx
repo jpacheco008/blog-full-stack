@@ -1,26 +1,31 @@
 import React from 'react';
-import useState from 'react'
+import { useState } from 'react'
+import { addPost } from '../../services/blogs.js'
 
 const Form = () => {
-    const [blogForm, setBlogForm] = useState("")
+    const [blogForm, setBlogForm] = useState({
+        name: " ",
+        imgURL: " ",
+        comment: " "
 
-    // const formHandleChange = () => {
+    })
 
-    // }
+    const formHandleChange = () => {
 
-    // const handleSubmit = () => {
+    }
 
-    // }
+    const handleSubmit = () => {
+        addPost(blogForm)
+    }
     return (
         <div>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
-                <input name="name" type="string" placeholder="user name" />
+                <input name="name" type="string" placeholder="user name" value="" />
                 <label htmlFor="imgURL">Image</label>
                 <input name="imgURL" type="string" placeholder="image url" />
                 <label htmlFor="comment">Comment</label>
                 <textarea name="comment" type="text" placeholder=""></textarea>
-                {/* <input name="comment" type="string" placeholder="Enter text ..." /> */}
                 <input type="submit" value="submit" />
             </form>
         </div>

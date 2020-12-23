@@ -4,7 +4,9 @@ let apiURL
 
 const apiURLs = {
   production: 'https://blog-three-musketeers.herokuapp.com/api/posts',
-  development: 'http://localhost:3000/api'
+
+  development: 'http://localhost:3001/api'
+
 }
 
 if (window.location.hostname === 'localhost') {

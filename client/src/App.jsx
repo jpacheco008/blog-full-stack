@@ -2,17 +2,18 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import SingleBlog from "./screens/SingleBlog/SingleBlog";
-import Nav from "./components/Nav/Nav";
-import AddBlog from "./screens/AddBlog/AddBlog";
+import AddBlog from './screens/AddBlog/AddBlog'
+import Nav from './components/Nav/Nav'
+
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Switch>
-        <Nav />
         <Route exact path="/" component={Home} />
-        <Route exact path="/post/:id" component={SingleBlog} />
-        <Route exact path="/addpost" component={AddBlog} />
+        <Route path="/posts/:id" component={SingleBlog} />
+        <Route path="/add-posts" component={AddBlog} />
       </Switch>
     </div>
   );
