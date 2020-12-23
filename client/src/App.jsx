@@ -2,9 +2,9 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import SingleBlog from "./screens/SingleBlog/SingleBlog";
-import AddBlog from './screens/AddBlog/AddBlog'
-import Nav from './components/Nav/Nav'
-
+import AddBlog from "./screens/AddBlog/AddBlog";
+import Nav from "./components/Nav/Nav";
+// import PostEdit from "./screens/PostEdit/PostEdit";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/posts/:id" component={SingleBlog} />
+        <Route exact path="/posts/:id" component={SingleBlog} />
         <Route path="/add-posts" component={AddBlog} />
       </Switch>
     </div>

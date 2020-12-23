@@ -18,11 +18,11 @@ const List = () => {
 
 
   return (
-    <div>
+    <div className='list'>
       {allBlogs.map((blog) => {
         return (
           <Blog
-            id={blog.id}
+            _id={blog._id}
             name={blog.name}
             imgURL={blog.imgURL}
             comment={blog.comment}
