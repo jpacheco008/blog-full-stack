@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./SingleBlog.css";
 // import Nav from "../../components/Nav/Nav";
-import { getBlog } from "../../services/blogs.js";
+import { getBlog, deletePost } from "../../services/blogs.js";
 import { useParams, Link } from "react-router-dom";
 
 const SingleBlog = () => {
@@ -30,9 +30,16 @@ const SingleBlog = () => {
       <div className="comment">{post.comment}</div>
       <div className="button-div">
         <button className="edit-button">
-          <Link to={`/posts/${post.id}`}>Edit</Link>
+          <Link to={`/posts/${post._id}/edit`}>Edit</Link>
         </button>
-        <button className="delete-button">Delete</button>
+        <button
+          className="delete-button"
+          onClick={() => {
+            deletePost(post._id);
+          }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
