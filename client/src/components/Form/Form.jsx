@@ -1,27 +1,64 @@
 import React from 'react';
 import { useState } from 'react'
+import { createPost } from '../../services/blogs'
+import './Form.css'
 
-const Form = () => {
-    const [blogForm, setBlogForm] = useState("")
+const Form = (props) => {
+    console.log(props)
+    const [blogForm, setBlogForm] = useState({
+        name: " ",
+        imgURL: " ",
+        comment: " "
 
-    // const formHandleChange = () => {
+    })
+    console.log(blogForm)
+    const formHandleChange = (event) => {
+        const { name, value } = event.target
+        setBlogForm({
+            ...blogForm,
+            [name]: value
+        })
 
-    // }
+    }
 
-    // const handleSubmit = () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const create = await createPost(blogForm)
+        setBlogForm({ create })
 
-    // }
+    }
     return (
-        <div>
-            <form >
+        <div className="form-div">
+            <form onSubmit={handleSubmit}>
+
                 <label htmlFor="name">Name</label>
-                <input name="name" type="string" placeholder="user name" />
+                <input
+                    name="name"
+                    id="form-name"
+                    type="string"
+                    value={props.name}
+                    placeholder="user name"
+                    onChange={formHandleChange} /><br />
+
                 <label htmlFor="imgURL">Image</label>
-                <input name="imgURL" type="string" placeholder="image url" />
-                <label htmlFor="comment">Comment</label>
-                <textarea name="comment" type="text" placeholder=""></textarea>
-                {/* <input name="comment" type="string" placeholder="Enter text ..." /> */}
-                <input type="submit" value="submit" />
+                <input
+                    name="imgURL"
+                    id="form-url"
+                    type="string"
+                    placeholder="image url"
+                    value={props.imgURL}
+                    onChange={formHandleChange} /><br />
+
+                {/* <label htmlFor="comment"></label> */}
+                <textarea
+                    name="comment"
+                    id="text-area"
+                    type="text"
+                    placeholder="Your comment ..."
+                    value={props.comment}
+                    onChange={formHandleChange}></textarea><br />
+
+                <button onClick={handleSubmit}>submit</button>
             </form>
         </div>
     );

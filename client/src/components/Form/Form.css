@@ -1,0 +1,20 @@
+.form-div{
+   display: flex;
+   justify-content: center;
+
+}
+
+#form-name{
+    margin-top: 50px;
+    width: 400px;
+}
+
+#form-url{
+    margin-top:20px;
+    width:400px;
+}
+
+#text-area{
+    margin-top:20px;
+    width: 350px;
+}

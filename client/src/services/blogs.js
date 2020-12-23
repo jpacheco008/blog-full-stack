@@ -1,3 +1,4 @@
+// import { post } from "../../../routes/blogRoutes"
 import api from './apiConfig'
 
 export const getBlogs = async () => {
