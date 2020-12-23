@@ -1,0 +1,23 @@
+.blog{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-decoration: none;
+  box-shadow: 0px 0px 3px 1px #CECECE;
+}
+.blog:hover {
+  transform: scale(1.02);
+  opacity: .9;
+}
+.blog-image{
+width: 200px;
+height: 200px;
+}
+
+.blog-name{
+  padding: 5px;
+  font-size: 20px;
+  font-style: italic;
+}
